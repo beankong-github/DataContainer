@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array", "Array\Array.vcxproj", "{9BEDD2A7-B719-4040-A726-7FF36C431BD2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vector", "Vector\Vector.vcxproj", "{58F88ADD-3766-4964-B732-20738604B34C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Recursive", "Recursive\Recursive.vcxproj", "{42CBC6E8-7811-44C7-93B4-F344E332DE69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{58F88ADD-3766-4964-B732-20738604B34C}.Release|x64.Build.0 = Release|x64
 		{58F88ADD-3766-4964-B732-20738604B34C}.Release|x86.ActiveCfg = Release|Win32
 		{58F88ADD-3766-4964-B732-20738604B34C}.Release|x86.Build.0 = Release|Win32
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Debug|x64.ActiveCfg = Debug|x64
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Debug|x64.Build.0 = Debug|x64
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Debug|x86.ActiveCfg = Debug|Win32
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Debug|x86.Build.0 = Debug|Win32
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Release|x64.ActiveCfg = Release|x64
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Release|x64.Build.0 = Release|x64
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Release|x86.ActiveCfg = Release|Win32
+		{42CBC6E8-7811-44C7-93B4-F344E332DE69}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

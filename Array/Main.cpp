@@ -51,8 +51,6 @@ int main()
 	{
 		array[i] = i + 1;
 	}
-
-	std::array<int, 10> stdArray;
 	
 	std::cin.get();
 }
