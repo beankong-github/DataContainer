@@ -14,8 +14,11 @@ public:
 	void AddToHead(int newData);
 	// 맨 뒤에 노드 추가
 	void Insert(int newData);
+
 	// 노드 삭제
 	void Delete(int data);
+	// 모두 정리
+	void Clear();
 	// 출력
 	void Print();
 private:
