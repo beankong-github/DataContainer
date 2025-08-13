@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <Windows.h>
 
 #define TEST 1
 
@@ -13,7 +14,6 @@ template<typename T>
 class Stack
 {
 public:
-	Stack();
 	~Stack() = default;
 	
 	// 스택 비우기
