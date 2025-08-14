@@ -24,6 +24,18 @@ public:
 	}
 
 	//  출력
+	void Print()
+	{
+		std::cout << "큐 내용: ";
+		int max = front < rear ? rear : rear + maxQueueCount;
+		for (int i = front + 1; i < max; ++i)
+		{
+			std::cout << " " << data[i % maxQueueCount];
+		}
+
+		std::cout << '\n';
+
+	}
 
 	// 큐에 데이터 추가
 	bool Enqueue(int newData)

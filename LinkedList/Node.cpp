@@ -12,5 +12,5 @@ Node::Node(int data)
 
 std::ostream& operator<<(std::ostream& os, const Node& node)
 {
-	return os << "Data:" << node.data;
+	return os << node.data;
 }

@@ -9,7 +9,7 @@ class Node
 	friend std::ostream& operator << (std::ostream& os, const Node& node);
 	
 	// Linked List만 Node 클래스를 생성 및 접근할 수 있도록 선언.
-	friend class LinkedList;
+	friend class SingleLinkedList;
 
 private:
 	Node();
