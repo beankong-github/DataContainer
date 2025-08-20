@@ -1,0 +1,156 @@
+#pragma once
+#include "List.h"
+#include "Node.h"
+
+
+template<typename T>
+class Tree
+{
+public:
+	Tree(const T& data)
+		: root(new Node<T>(data))
+	{
+	}
+
+	~Tree()
+	{
+		// TODO : 자손을 모두 삭제하는 함수 구현 후 호출 해야 한다.
+		List<Node<T>*>& children = root->GetChildren();
+		while (children.Size() > 0)
+		{
+			root->RemoveChild(children[0]);
+		}
+		
+		// 루트 제거
+		delete root;
+		root = nullptr;
+
+	}
+
+	void AddChild(const T& parentData, const T& childData)
+	{
+		// 1. 검색
+		Node<T>* outParent = nullptr;
+		if (Find(parentData, outParent))
+		{
+			outParent->AddChild(childData);
+			return;
+		}
+
+		// 부모 노드 검색 실패
+		std::cout <<  parentData <<" 값을 갖는 부모 노드 검색 실패\n" ;
+	}
+	
+	bool Remove(const T& data)
+	{
+		// TODO :: 삭제할 노드를 검색하고, 자손 노드까지 삭제하는 함수 작성 후 호출
+
+		Node<T>* outNode = nullptr;
+		
+		// 검색 실패
+		if (!Find(data, outNode))
+		{
+			std::cout << "삭제할 노드를 찾지 못했습니다.\n";
+			return false;
+		}
+
+		// 검색 성공
+		// 경우의 수 1 : 삭제할 노드가 루트 노드인 경우
+		if (outNode == root)
+		{
+			std::cout << "루트 노드 삭제 불가\n";
+			return false;
+		}
+		// 경우의 수 2
+		Node<T>* parent = outNode->GetParent();
+		parent->RemoveChild(outNode);
+
+		return true;
+	}
+
+
+	// 데이터로 특정 노드를 검색
+	bool Find(const T& data, Node<T>*& outNode)
+	{
+		return FindRecursive(data, root, outNode);
+	}
+
+	bool FindRecursive(const T& data, Node<T>* node, Node<T>*& outNode)
+	{
+		// 재귀 함수 종료 조건
+		if (node == nullptr)
+		{
+			outNode = nullptr;
+			return false;
+		}
+
+		// 검색 성공
+		if (node->GetData() == data)
+		{
+			outNode = node;
+			return true;
+		}
+
+		// 자손을 재귀적으로 검색
+		List<Node<T>*>& children = node->GetChildren();
+		int count = children.Size();
+		for (int ix = 0; ix < count; ++ix)
+		{
+			// 자손 검색 진행
+			Node<T>* child = children[ix];
+			bool result = FindRecursive(data, child, outNode);
+			if (result)
+			{
+				return true;
+			}
+		}
+
+		// 검색 실패
+		outNode = nullptr;
+		return false;
+
+	}
+
+	// 전위 순회
+	void PreorderTraverse()
+	{
+		PreorderTraverseRecursive(root);
+	}
+
+	// 전위 순회 재귀
+	// node : 방문할 기준 노드
+	// depth :  출력할 때 부모-자손 구분용 
+	void  PreorderTraverseRecursive(Node<T>* node, int depth = 0)
+	{
+		// 재귀 함수 종료 조건
+		if (!node)
+		{
+			return;
+		}
+
+		// 뎊스 출력
+		for (int ix = 0; ix < depth; ++ix)
+		{
+			std::cout << "    ";
+		}
+
+		// 부모노드 방문
+		std::cout << node->GetData() << "\n";
+		// 자손 노드 방문
+		List<Node<T>*>& children = node->GetChildren();
+		if (children.Size() == 0)
+			return;
+
+		for (int ix = 0; ix < children.Size(); ++ix)
+		{
+			Node<T>* child = children[ix];
+			PreorderTraverseRecursive(child, depth + 1);
+		}
+	}
+
+
+
+
+private:
+	Node<T>* root = nullptr;
+};
