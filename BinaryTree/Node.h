@@ -78,6 +78,7 @@ public:
 
     // Getter/Setter.
     T GetData() const { return data; }
+    void SetData(const T& newData) { data = newData; }
 
     Node<T>* GetParent() const { return parent; }
     Node<T>* SetParent(Node<T>* newParent) { parent = newParent; }

@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tree", "Tree\Tree.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree", "BinaryTree\BinaryTree.vcxproj", "{9871FAAC-4128-47A3-AF85-F24F57F72EA4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.vcxproj", "{AE87FC49-57F3-449A-B435-47FBECDF046F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{9871FAAC-4128-47A3-AF85-F24F57F72EA4}.Release|x64.Build.0 = Release|x64
 		{9871FAAC-4128-47A3-AF85-F24F57F72EA4}.Release|x86.ActiveCfg = Release|Win32
 		{9871FAAC-4128-47A3-AF85-F24F57F72EA4}.Release|x86.Build.0 = Release|Win32
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Debug|x64.ActiveCfg = Debug|x64
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Debug|x64.Build.0 = Debug|x64
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Debug|x86.ActiveCfg = Debug|Win32
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Debug|x86.Build.0 = Debug|Win32
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Release|x64.ActiveCfg = Release|x64
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Release|x64.Build.0 = Release|x64
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Release|x86.ActiveCfg = Release|Win32
+		{AE87FC49-57F3-449A-B435-47FBECDF046F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
